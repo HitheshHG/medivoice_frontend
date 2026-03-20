@@ -9,12 +9,12 @@ const ease = [0.16, 1, 0.3, 1]
 function EyeIcon({ open }) {
   return open ? (
     <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-      <path d="M1 8s2.5-5 7-5 7 5 7 5-2.5 5-7 5-7-5-7-5Z" stroke="#6b7280" strokeWidth="1.4" strokeLinejoin="round"/>
-      <circle cx="8" cy="8" r="2" stroke="#6b7280" strokeWidth="1.4"/>
+      <path d="M1 8s2.5-5 7-5 7 5 7 5-2.5 5-7 5-7-5-7-5Z" stroke="#6b7280" strokeWidth="1.4" strokeLinejoin="round" />
+      <circle cx="8" cy="8" r="2" stroke="#6b7280" strokeWidth="1.4" />
     </svg>
   ) : (
     <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-      <path d="M2 2l12 12M6.5 6.6A2 2 0 0 0 9.4 9.5M4.2 4.3C2.7 5.3 1.5 7 1.5 8s2.2 4.5 6.5 4.5c1.3 0 2.5-.3 3.5-.8M7 3.6C7.3 3.5 7.7 3.5 8 3.5c4.3 0 6.5 3.5 6.5 4.5 0 .6-.5 1.5-1.4 2.4" stroke="#6b7280" strokeWidth="1.4" strokeLinecap="round"/>
+      <path d="M2 2l12 12M6.5 6.6A2 2 0 0 0 9.4 9.5M4.2 4.3C2.7 5.3 1.5 7 1.5 8s2.2 4.5 6.5 4.5c1.3 0 2.5-.3 3.5-.8M7 3.6C7.3 3.5 7.7 3.5 8 3.5c4.3 0 6.5 3.5 6.5 4.5 0 .6-.5 1.5-1.4 2.4" stroke="#6b7280" strokeWidth="1.4" strokeLinecap="round" />
     </svg>
   )
 }
@@ -141,11 +141,11 @@ export default function AdminLogin() {
           fontSize: 13, color: "rgba(255,255,255,0.35)", textDecoration: "none",
           marginBottom: 36, transition: "color 0.2s",
         }}
-        onMouseEnter={e => e.currentTarget.style.color = "rgba(255,255,255,0.7)"}
-        onMouseLeave={e => e.currentTarget.style.color = "rgba(255,255,255,0.35)"}
+          onMouseEnter={e => e.currentTarget.style.color = "rgba(255,255,255,0.7)"}
+          onMouseLeave={e => e.currentTarget.style.color = "rgba(255,255,255,0.35)"}
         >
           <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
-            <path d="M9 2L4 7l5 5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+            <path d="M9 2L4 7l5 5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
           </svg>
           Back to user login
         </Link>
@@ -164,7 +164,7 @@ export default function AdminLogin() {
             boxShadow: "0 4px 16px rgba(79,70,229,0.4)",
           }}>
             <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-              <path d="M10 2L12.5 7.5H18L13.5 11L15.5 17L10 13.5L4.5 17L6.5 11L2 7.5H7.5L10 2Z" fill="white" fillOpacity="0.9"/>
+              <path d="M10 2L12.5 7.5H18L13.5 11L15.5 17L10 13.5L4.5 17L6.5 11L2 7.5H7.5L10 2Z" fill="white" fillOpacity="0.9" />
             </svg>
           </div>
           <div>
@@ -190,8 +190,8 @@ export default function AdminLogin() {
           borderRadius: 10, padding: "12px 14px", marginBottom: 24,
         }}>
           <svg width="16" height="16" viewBox="0 0 16 16" fill="none" style={{ flexShrink: 0, marginTop: 1 }}>
-            <path d="M8 1L2 4v4c0 3.5 2.5 6.3 6 7 3.5-.7 6-3.5 6-7V4L8 1Z" stroke="#818cf8" strokeWidth="1.3" strokeLinejoin="round"/>
-            <path d="M5.5 8l2 2 3-3" stroke="#818cf8" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round"/>
+            <path d="M8 1L2 4v4c0 3.5 2.5 6.3 6 7 3.5-.7 6-3.5 6-7V4L8 1Z" stroke="#818cf8" strokeWidth="1.3" strokeLinejoin="round" />
+            <path d="M5.5 8l2 2 3-3" stroke="#818cf8" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round" />
           </svg>
           <p style={{ fontSize: 12, color: "rgba(255,255,255,0.45)", lineHeight: 1.55 }}>
             This session is monitored. Unauthorized access attempts are logged and reported.
@@ -209,8 +209,8 @@ export default function AdminLogin() {
               <motion.span key="l" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}
                 style={{ display: "flex", alignItems: "center", gap: 8 }}>
                 <svg className="spin" width="16" height="16" viewBox="0 0 16 16" fill="none">
-                  <circle cx="8" cy="8" r="6" stroke="rgba(255,255,255,0.3)" strokeWidth="2"/>
-                  <path d="M8 2a6 6 0 0 1 6 6" stroke="white" strokeWidth="2" strokeLinecap="round"/>
+                  <circle cx="8" cy="8" r="6" stroke="rgba(255,255,255,0.3)" strokeWidth="2" />
+                  <path d="M8 2a6 6 0 0 1 6 6" stroke="white" strokeWidth="2" strokeLinecap="round" />
                 </svg>
                 Verifying credentials…
               </motion.span>

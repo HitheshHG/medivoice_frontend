@@ -16,8 +16,8 @@ const ease = [0.16, 1, 0.3, 1]
  * The voice controller queries using local date, so they never matched.
  */
 function localDateStr(d) {
-  const y  = d.getFullYear()
-  const m  = String(d.getMonth() + 1).padStart(2, "0")
+  const y = d.getFullYear()
+  const m = String(d.getMonth() + 1).padStart(2, "0")
   const dd = String(d.getDate()).padStart(2, "0")
   return `${y}-${m}-${dd}`
 }
@@ -203,7 +203,7 @@ export default function AdminDashboard() {
                 display: "flex", alignItems: "center", justifyContent: "center",
               }}>
                 <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
-                  <path d="M7 1L8.8 5.3H13.3L9.8 7.9L11 12.3L7 9.7L3 12.3L4.2 7.9L0.7 5.3H5.2L7 1Z" fill="white"/>
+                  <path d="M7 1L8.8 5.3H13.3L9.8 7.9L11 12.3L7 9.7L3 12.3L4.2 7.9L0.7 5.3H5.2L7 1Z" fill="white" />
                 </svg>
               </div>
               <span style={{ fontSize: 12, color: "#6b7280", fontWeight: 500, letterSpacing: "0.04em" }}>
@@ -419,15 +419,15 @@ export default function AdminDashboard() {
               {loading ? (
                 <>
                   <svg className="spin" width="16" height="16" viewBox="0 0 16 16" fill="none">
-                    <circle cx="8" cy="8" r="6" stroke="rgba(255,255,255,0.3)" strokeWidth="2"/>
-                    <path d="M8 2a6 6 0 0 1 6 6" stroke="white" strokeWidth="2" strokeLinecap="round"/>
+                    <circle cx="8" cy="8" r="6" stroke="rgba(255,255,255,0.3)" strokeWidth="2" />
+                    <path d="M8 2a6 6 0 0 1 6 6" stroke="white" strokeWidth="2" strokeLinecap="round" />
                   </svg>
                   Creating…
                 </>
               ) : (
                 <>
                   <svg width="15" height="15" viewBox="0 0 15 15" fill="none">
-                    <path d="M7.5 2v11M2 7.5h11" stroke={!selectedDate ? "#9ca3af" : "white"} strokeWidth="1.8" strokeLinecap="round"/>
+                    <path d="M7.5 2v11M2 7.5h11" stroke={!selectedDate ? "#9ca3af" : "white"} strokeWidth="1.8" strokeLinecap="round" />
                   </svg>
                   Create slot
                 </>

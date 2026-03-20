@@ -9,12 +9,12 @@ const ease = [0.16, 1, 0.3, 1]
 function EyeIcon({ open }) {
   return open ? (
     <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-      <path d="M1 8s2.5-5 7-5 7 5 7 5-2.5 5-7 5-7-5-7-5Z" stroke="#9ca3af" strokeWidth="1.4" strokeLinejoin="round"/>
-      <circle cx="8" cy="8" r="2" stroke="#9ca3af" strokeWidth="1.4"/>
+      <path d="M1 8s2.5-5 7-5 7 5 7 5-2.5 5-7 5-7-5-7-5Z" stroke="#9ca3af" strokeWidth="1.4" strokeLinejoin="round" />
+      <circle cx="8" cy="8" r="2" stroke="#9ca3af" strokeWidth="1.4" />
     </svg>
   ) : (
     <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-      <path d="M2 2l12 12M6.5 6.6A2 2 0 0 0 9.4 9.5M4.2 4.3C2.7 5.3 1.5 7 1.5 8s2.2 4.5 6.5 4.5c1.3 0 2.5-.3 3.5-.8M7 3.6C7.3 3.5 7.7 3.5 8 3.5c4.3 0 6.5 3.5 6.5 4.5 0 .6-.5 1.5-1.4 2.4" stroke="#9ca3af" strokeWidth="1.4" strokeLinecap="round"/>
+      <path d="M2 2l12 12M6.5 6.6A2 2 0 0 0 9.4 9.5M4.2 4.3C2.7 5.3 1.5 7 1.5 8s2.2 4.5 6.5 4.5c1.3 0 2.5-.3 3.5-.8M7 3.6C7.3 3.5 7.7 3.5 8 3.5c4.3 0 6.5 3.5 6.5 4.5 0 .6-.5 1.5-1.4 2.4" stroke="#9ca3af" strokeWidth="1.4" strokeLinecap="round" />
     </svg>
   )
 }
@@ -209,11 +209,11 @@ export default function Login() {
             fontSize: 13, color: "#6b7280", textDecoration: "none",
             marginBottom: 32, transition: "color 0.2s",
           }}
-          onMouseEnter={e => e.currentTarget.style.color = "#111827"}
-          onMouseLeave={e => e.currentTarget.style.color = "#6b7280"}
+            onMouseEnter={e => e.currentTarget.style.color = "#111827"}
+            onMouseLeave={e => e.currentTarget.style.color = "#6b7280"}
           >
             <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
-              <path d="M9 2L4 7l5 5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+              <path d="M9 2L4 7l5 5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
             </svg>
             Back to home
           </Link>
@@ -228,9 +228,9 @@ export default function Login() {
               flexShrink: 0,
             }}>
               <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                <rect x="5" y="1" width="6" height="9" rx="3" stroke="white" strokeWidth="1.4"/>
-                <path d="M2.5 7.5A5.5 5.5 0 0 0 13.5 7.5" stroke="white" strokeWidth="1.4" strokeLinecap="round"/>
-                <line x1="8" y1="13" x2="8" y2="15" stroke="white" strokeWidth="1.4" strokeLinecap="round"/>
+                <rect x="5" y="1" width="6" height="9" rx="3" stroke="white" strokeWidth="1.4" />
+                <path d="M2.5 7.5A5.5 5.5 0 0 0 13.5 7.5" stroke="white" strokeWidth="1.4" strokeLinecap="round" />
+                <line x1="8" y1="13" x2="8" y2="15" stroke="white" strokeWidth="1.4" strokeLinecap="round" />
               </svg>
             </div>
             <span style={{ fontSize: 15, fontWeight: 700, color: "#111827", letterSpacing: "-0.03em" }}>
@@ -295,8 +295,8 @@ export default function Login() {
                   style={{ display: "flex", alignItems: "center", gap: 8 }}
                 >
                   <svg className="spin" width="16" height="16" viewBox="0 0 16 16" fill="none">
-                    <circle cx="8" cy="8" r="6" stroke="rgba(255,255,255,0.3)" strokeWidth="2"/>
-                    <path d="M8 2a6 6 0 0 1 6 6" stroke="white" strokeWidth="2" strokeLinecap="round"/>
+                    <circle cx="8" cy="8" r="6" stroke="rgba(255,255,255,0.3)" strokeWidth="2" />
+                    <path d="M8 2a6 6 0 0 1 6 6" stroke="white" strokeWidth="2" strokeLinecap="round" />
                   </svg>
                   Signing in…
                 </motion.span>
@@ -386,7 +386,7 @@ export default function Login() {
             letterSpacing: "-0.02em", lineHeight: 1.15,
             marginTop: 20, fontStyle: "italic",
           }}>
-            "Booked in under<br/>30 seconds — no hold music."
+            "Booked in under<br />30 seconds — no hold music."
           </h2>
           <p style={{
             fontSize: 13, color: "rgba(255,255,255,0.5)",

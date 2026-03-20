@@ -37,7 +37,7 @@ function Field({ label, value, icon }) {
 }
 
 export default function Profile() {
-  const [user, setUser]     = useState(null)
+  const [user, setUser] = useState(null)
   const [loading, setLoading] = useState(true)
 
   const load = async () => {
@@ -175,8 +175,8 @@ export default function Profile() {
                   value={user?.name}
                   icon={
                     <svg width="15" height="15" viewBox="0 0 15 15" fill="none">
-                      <circle cx="7.5" cy="5" r="3" stroke="currentColor" strokeWidth="1.3"/>
-                      <path d="M1.5 13c0-3.3 2.7-5 6-5s6 1.7 6 5" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round"/>
+                      <circle cx="7.5" cy="5" r="3" stroke="currentColor" strokeWidth="1.3" />
+                      <path d="M1.5 13c0-3.3 2.7-5 6-5s6 1.7 6 5" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" />
                     </svg>
                   }
                 />
@@ -185,8 +185,8 @@ export default function Profile() {
                   value={user?.email}
                   icon={
                     <svg width="15" height="15" viewBox="0 0 15 15" fill="none">
-                      <rect x="1" y="3" width="13" height="9" rx="2" stroke="currentColor" strokeWidth="1.3"/>
-                      <path d="M1 5l6.5 4L14 5" stroke="currentColor" strokeWidth="1.3" strokeLinejoin="round"/>
+                      <rect x="1" y="3" width="13" height="9" rx="2" stroke="currentColor" strokeWidth="1.3" />
+                      <path d="M1 5l6.5 4L14 5" stroke="currentColor" strokeWidth="1.3" strokeLinejoin="round" />
                     </svg>
                   }
                 />
@@ -195,7 +195,7 @@ export default function Profile() {
                   value={user?.role ? user.role.charAt(0).toUpperCase() + user.role.slice(1) : "Patient"}
                   icon={
                     <svg width="15" height="15" viewBox="0 0 15 15" fill="none">
-                      <path d="M7.5 1L9.2 5.5H14L10.2 8.2 11.5 13 7.5 10.3 3.5 13 4.8 8.2 1 5.5H5.8L7.5 1Z" stroke="currentColor" strokeWidth="1.3" strokeLinejoin="round"/>
+                      <path d="M7.5 1L9.2 5.5H14L10.2 8.2 11.5 13 7.5 10.3 3.5 13 4.8 8.2 1 5.5H5.8L7.5 1Z" stroke="currentColor" strokeWidth="1.3" strokeLinejoin="round" />
                     </svg>
                   }
                 />
@@ -208,8 +208,8 @@ export default function Profile() {
                     color: "#6b7280",
                   }}>
                     <svg width="15" height="15" viewBox="0 0 15 15" fill="none">
-                      <circle cx="7.5" cy="7.5" r="6" stroke="currentColor" strokeWidth="1.3"/>
-                      <path d="M7.5 5v2.5l1.5 1.5" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round"/>
+                      <circle cx="7.5" cy="7.5" r="6" stroke="currentColor" strokeWidth="1.3" />
+                      <path d="M7.5 5v2.5l1.5 1.5" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round" />
                     </svg>
                   </div>
                   <div>

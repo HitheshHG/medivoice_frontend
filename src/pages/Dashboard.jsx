@@ -155,7 +155,7 @@ export default function Dashboard() {
   }
 
   const available = slots.filter(s => !s.is_booked).length
-  const booked    = slots.filter(s => s.is_booked).length
+  const booked = slots.filter(s => s.is_booked).length
 
   return (
     <div style={{
@@ -273,9 +273,9 @@ export default function Dashboard() {
               fontSize: 12, color: "#6b7280",
             }}>
               <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
-                <rect x="1" y="3" width="12" height="10" rx="2" stroke="#9ca3af" strokeWidth="1.3"/>
-                <path d="M1 6h12" stroke="#9ca3af" strokeWidth="1.3"/>
-                <path d="M4 1v2M10 1v2" stroke="#9ca3af" strokeWidth="1.3" strokeLinecap="round"/>
+                <rect x="1" y="3" width="12" height="10" rx="2" stroke="#9ca3af" strokeWidth="1.3" />
+                <path d="M1 6h12" stroke="#9ca3af" strokeWidth="1.3" />
+                <path d="M4 1v2M10 1v2" stroke="#9ca3af" strokeWidth="1.3" strokeLinecap="round" />
               </svg>
               Next: Tomorrow
             </div>
@@ -319,9 +319,9 @@ export default function Dashboard() {
             display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0,
           }}>
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-              <rect x="1" y="3" width="14" height="11" rx="2" stroke="#22c55e" strokeWidth="1.3"/>
-              <path d="M1 6h14" stroke="#22c55e" strokeWidth="1.3"/>
-              <path d="M4.5 1v2M11.5 1v2" stroke="#22c55e" strokeWidth="1.3" strokeLinecap="round"/>
+              <rect x="1" y="3" width="14" height="11" rx="2" stroke="#22c55e" strokeWidth="1.3" />
+              <path d="M1 6h14" stroke="#22c55e" strokeWidth="1.3" />
+              <path d="M4.5 1v2M11.5 1v2" stroke="#22c55e" strokeWidth="1.3" strokeLinecap="round" />
             </svg>
           </div>
           <div>

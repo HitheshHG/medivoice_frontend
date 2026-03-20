@@ -305,8 +305,8 @@ export default function Landing() {
               boxShadow: "0 2px 8px rgba(37,99,235,0.3)",
             }}>
               <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                <path d="M8 2a5 5 0 0 1 4 8l1.5 1.5-1.5 1.5L10.5 11.5A5 5 0 1 1 8 2Z" fill="white" fillOpacity="0.9"/>
-                <circle cx="8" cy="7" r="2" fill="white"/>
+                <path d="M8 2a5 5 0 0 1 4 8l1.5 1.5-1.5 1.5L10.5 11.5A5 5 0 1 1 8 2Z" fill="white" fillOpacity="0.9" />
+                <circle cx="8" cy="7" r="2" fill="white" />
               </svg>
             </div>
             <span style={{
@@ -412,8 +412,8 @@ export default function Landing() {
               <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }}>
                 <Link to="/register" className="btn-primary">
                   <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                    <circle cx="8" cy="8" r="7" stroke="white" strokeWidth="1.5"/>
-                    <path d="M6 5.5l4 2.5-4 2.5V5.5Z" fill="white"/>
+                    <circle cx="8" cy="8" r="7" stroke="white" strokeWidth="1.5" />
+                    <path d="M6 5.5l4 2.5-4 2.5V5.5Z" fill="white" />
                   </svg>
                   Book appointment
                 </Link>
@@ -482,9 +482,9 @@ export default function Landing() {
                     display: "flex", alignItems: "center", justifyContent: "center",
                   }}>
                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                      <rect x="5" y="1" width="6" height="9" rx="3" stroke="#2563eb" strokeWidth="1.5"/>
-                      <path d="M2.5 7.5A5.5 5.5 0 0 0 13.5 7.5" stroke="#2563eb" strokeWidth="1.5" strokeLinecap="round"/>
-                      <line x1="8" y1="13" x2="8" y2="15" stroke="#2563eb" strokeWidth="1.5" strokeLinecap="round"/>
+                      <rect x="5" y="1" width="6" height="9" rx="3" stroke="#2563eb" strokeWidth="1.5" />
+                      <path d="M2.5 7.5A5.5 5.5 0 0 0 13.5 7.5" stroke="#2563eb" strokeWidth="1.5" strokeLinecap="round" />
+                      <line x1="8" y1="13" x2="8" y2="15" stroke="#2563eb" strokeWidth="1.5" strokeLinecap="round" />
                     </svg>
                   </div>
                   <div>
@@ -545,8 +545,8 @@ export default function Landing() {
                     }}
                   >
                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                      <circle cx="8" cy="8" r="7" fill="#22c55e"/>
-                      <path d="M5 8l2.5 2.5L11 5.5" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                      <circle cx="8" cy="8" r="7" fill="#22c55e" />
+                      <path d="M5 8l2.5 2.5L11 5.5" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                     </svg>
                     <span style={{ fontSize: 13, color: "#166534", fontWeight: 500 }}>
                       Appointment confirmed — Dr. Sharma, 5 PM tomorrow
@@ -734,8 +734,8 @@ export default function Landing() {
                 fontSize: 13, color: "#9ca3af", cursor: "pointer",
                 transition: "color 0.2s",
               }}
-              onMouseEnter={e => e.target.style.color = "#4b5563"}
-              onMouseLeave={e => e.target.style.color = "#9ca3af"}
+                onMouseEnter={e => e.target.style.color = "#4b5563"}
+                onMouseLeave={e => e.target.style.color = "#9ca3af"}
               >
                 {l}
               </span>

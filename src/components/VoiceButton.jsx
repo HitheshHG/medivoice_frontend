@@ -17,9 +17,9 @@ const COMMANDS = [
 function MicIcon() {
   return (
     <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
-      <rect x="6" y="1" width="6" height="10" rx="3" stroke="currentColor" strokeWidth="1.5"/>
-      <path d="M3 9a6 6 0 0 0 12 0" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
-      <line x1="9" y1="15" x2="9" y2="17" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
+      <rect x="6" y="1" width="6" height="10" rx="3" stroke="currentColor" strokeWidth="1.5" />
+      <path d="M3 9a6 6 0 0 0 12 0" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+      <line x1="9" y1="15" x2="9" y2="17" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
     </svg>
   )
 }
@@ -27,9 +27,9 @@ function MicIcon() {
 function HelpIcon() {
   return (
     <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
-      <circle cx="7" cy="7" r="6" stroke="currentColor" strokeWidth="1.3"/>
-      <path d="M5.5 5.5a1.5 1.5 0 0 1 3 0c0 1-1.5 1.5-1.5 2.5" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round"/>
-      <circle cx="7" cy="11" r="0.6" fill="currentColor"/>
+      <circle cx="7" cy="7" r="6" stroke="currentColor" strokeWidth="1.3" />
+      <path d="M5.5 5.5a1.5 1.5 0 0 1 3 0c0 1-1.5 1.5-1.5 2.5" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" />
+      <circle cx="7" cy="11" r="0.6" fill="currentColor" />
     </svg>
   )
 }
@@ -51,10 +51,10 @@ function Waveform() {
 }
 
 export default function VoiceButton({ reload }) {
-  const [state, setState]           = useState("idle") // idle | listening | processing
+  const [state, setState] = useState("idle") // idle | listening | processing
   const [transcript, setTranscript] = useState("")
-  const [showHelp, setShowHelp]     = useState(false)
-  const recognitionRef              = useRef(null)
+  const [showHelp, setShowHelp] = useState(false)
+  const recognitionRef = useRef(null)
 
   const start = () => {
     const SR = window.SpeechRecognition || window.webkitSpeechRecognition
@@ -64,8 +64,8 @@ export default function VoiceButton({ reload }) {
 
     if (!recognitionRef.current) {
       const rec = new SR()
-      rec.lang           = "en-US"
-      rec.continuous     = false
+      rec.lang = "en-US"
+      rec.continuous = false
       rec.interimResults = false
 
       rec.onstart = () => { setState("listening"); setTranscript("") }
@@ -104,7 +104,7 @@ export default function VoiceButton({ reload }) {
     setState("idle")
   }
 
-  const isListening  = state === "listening"
+  const isListening = state === "listening"
   const isProcessing = state === "processing"
 
   return (
@@ -216,13 +216,13 @@ export default function VoiceButton({ reload }) {
             background: isListening
               ? "linear-gradient(135deg, #ef4444, #dc2626)"
               : isProcessing
-              ? "linear-gradient(135deg, #6b7280, #4b5563)"
-              : "linear-gradient(135deg, #1d4ed8, #1e40af)",
+                ? "linear-gradient(135deg, #6b7280, #4b5563)"
+                : "linear-gradient(135deg, #1d4ed8, #1e40af)",
             color: "white",
             boxShadow: isListening
               ? "0 4px 16px rgba(239,68,68,0.35)"
               : isProcessing ? "none"
-              : "0 2px 8px rgba(29,78,216,0.3)",
+                : "0 2px 8px rgba(29,78,216,0.3)",
             position: "relative", overflow: "hidden",
           }}
         >
@@ -248,8 +248,8 @@ export default function VoiceButton({ reload }) {
               <motion.span key="proc" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}
                 style={{ display: "flex", alignItems: "center", gap: 8 }}>
                 <svg style={{ animation: "spin 0.8s linear infinite" }} width="16" height="16" viewBox="0 0 16 16" fill="none">
-                  <circle cx="8" cy="8" r="6" stroke="rgba(255,255,255,0.3)" strokeWidth="2"/>
-                  <path d="M8 2a6 6 0 0 1 6 6" stroke="white" strokeWidth="2" strokeLinecap="round"/>
+                  <circle cx="8" cy="8" r="6" stroke="rgba(255,255,255,0.3)" strokeWidth="2" />
+                  <path d="M8 2a6 6 0 0 1 6 6" stroke="white" strokeWidth="2" strokeLinecap="round" />
                 </svg>
                 Processing…
               </motion.span>

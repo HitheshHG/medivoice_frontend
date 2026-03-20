@@ -4,10 +4,10 @@ const pool = require("../config/db")
    TIME PARSING
 ───────────────────────────────────────────── */
 const WORD_NUMBERS = {
-  zero:0, one:1, two:2, three:3, four:4, five:5, six:6, seven:7,
-  eight:8, nine:9, ten:10, eleven:11, twelve:12, thirteen:13,
-  fourteen:14, fifteen:15, sixteen:16, seventeen:17, eighteen:18,
-  nineteen:19, twenty:20, thirty:30, forty:40, fifty:50,
+  zero: 0, one: 1, two: 2, three: 3, four: 4, five: 5, six: 6, seven: 7,
+  eight: 8, nine: 9, ten: 10, eleven: 11, twelve: 12, thirteen: 13,
+  fourteen: 14, fifteen: 15, sixteen: 16, seventeen: 17, eighteen: 18,
+  nineteen: 19, twenty: 20, thirty: 30, forty: 40, fifty: 50,
 }
 
 function wordToNumber(word) {
@@ -62,7 +62,7 @@ function parseTime(text) {
   }
 
   const parts = t.split(/\s+/)
-  const nums  = parts.map(wordToNumber).filter(n => n !== null)
+  const nums = parts.map(wordToNumber).filter(n => n !== null)
   if (nums.length === 1) return `${String(nums[0]).padStart(2, "0")}:00`
   if (nums.length === 2) return `${String(nums[0]).padStart(2, "0")}:${String(nums[1]).padStart(2, "0")}`
 
@@ -74,17 +74,17 @@ function parseTime(text) {
    Uses local calendar date, not UTC, to avoid
    off-by-one day for India (UTC+5:30).
 ───────────────────────────────────────────── */
-const DAYS = ["sunday","monday","tuesday","wednesday","thursday","friday","saturday"]
+const DAYS = ["sunday", "monday", "tuesday", "wednesday", "thursday", "friday", "saturday"]
 
 function localDateStr(d) {
-  const y  = d.getFullYear()
-  const m  = String(d.getMonth() + 1).padStart(2, "0")
+  const y = d.getFullYear()
+  const m = String(d.getMonth() + 1).padStart(2, "0")
   const dd = String(d.getDate()).padStart(2, "0")
   return `${y}-${m}-${dd}`
 }
 
 function parseDate(text) {
-  const t   = text.toLowerCase()
+  const t = text.toLowerCase()
   const now = new Date()
 
   if (/\btoday\b/.test(t)) return localDateStr(now)
@@ -99,7 +99,7 @@ function parseDate(text) {
     if (t.includes(DAYS[i])) {
       const isNext = t.includes("next")
       const target = new Date(now)
-      const diff   = (i - now.getDay() + 7) % 7 || 7
+      const diff = (i - now.getDay() + 7) % 7 || 7
       target.setDate(now.getDate() + (isNext ? diff + 7 : diff))
       return localDateStr(target)
     }
@@ -114,13 +114,13 @@ function parseDate(text) {
 function detectIntent(text) {
   const t = text.toLowerCase()
 
-  const bookPatterns   = [/\bbook\b/, /\bschedule\b/, /\bneed a slot\b/, /\bget a slot\b/, /\bmake.+appointment\b/]
+  const bookPatterns = [/\bbook\b/, /\bschedule\b/, /\bneed a slot\b/, /\bget a slot\b/, /\bmake.+appointment\b/]
   const cancelPatterns = [/\bcancel\b/, /\bremove\b/, /\bdelete my appointment\b/, /\bcall off\b/, /\bdon't need.+appointment\b/]
-  const listPatterns   = [/\bmy appointment\b/, /\bshow.+slot\b/, /\bcheck.+appointment\b/, /\bwhat.+appointment\b/]
+  const listPatterns = [/\bmy appointment\b/, /\bshow.+slot\b/, /\bcheck.+appointment\b/, /\bwhat.+appointment\b/]
 
   if (cancelPatterns.some(r => r.test(t))) return "cancel"
-  if (bookPatterns.some(r => r.test(t)))   return "book"
-  if (listPatterns.some(r => r.test(t)))   return "list"
+  if (bookPatterns.some(r => r.test(t))) return "book"
+  if (listPatterns.some(r => r.test(t))) return "list"
   return "unknown"
 }
 
@@ -137,7 +137,7 @@ exports.processVoice = async (req, res) => {
     }
 
     const user_id = req.user.id
-    const intent  = detectIntent(text)
+    const intent = detectIntent(text)
 
     /* ── CANCEL ── */
     if (intent === "cancel") {
@@ -270,7 +270,7 @@ exports.processVoice = async (req, res) => {
     })
 
   } catch (err) {
-    await client.query("ROLLBACK").catch(() => {})
+    await client.query("ROLLBACK").catch(() => { })
     console.error("[voiceController]", err)
     res.status(500).json({ message: "Something went wrong. Please try again." })
   } finally {

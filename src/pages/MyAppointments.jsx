@@ -9,17 +9,17 @@ const ease = [0.16, 1, 0.3, 1]
 function CalIcon() {
   return (
     <svg width="15" height="15" viewBox="0 0 15 15" fill="none">
-      <rect x="1" y="2.5" width="13" height="11" rx="2" stroke="currentColor" strokeWidth="1.3"/>
-      <path d="M1 6.5h13" stroke="currentColor" strokeWidth="1.3"/>
-      <path d="M4.5 1v2M10.5 1v2" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round"/>
+      <rect x="1" y="2.5" width="13" height="11" rx="2" stroke="currentColor" strokeWidth="1.3" />
+      <path d="M1 6.5h13" stroke="currentColor" strokeWidth="1.3" />
+      <path d="M4.5 1v2M10.5 1v2" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" />
     </svg>
   )
 }
 function ClockIcon() {
   return (
     <svg width="13" height="13" viewBox="0 0 13 13" fill="none">
-      <circle cx="6.5" cy="6.5" r="5.5" stroke="currentColor" strokeWidth="1.3"/>
-      <path d="M6.5 3.5v3l2 1.5" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round"/>
+      <circle cx="6.5" cy="6.5" r="5.5" stroke="currentColor" strokeWidth="1.3" />
+      <path d="M6.5 3.5v3l2 1.5" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round" />
     </svg>
   )
 }
@@ -157,9 +157,9 @@ function AppointmentRow({ appt, onCancel, index }) {
 }
 
 export default function MyAppointments() {
-  const [data, setData]     = useState([])
+  const [data, setData] = useState([])
   const [loading, setLoading] = useState(false)
-  const [tab, setTab]       = useState("active")   // active | cancelled
+  const [tab, setTab] = useState("active")   // active | cancelled
 
   const load = async () => {
     try {
@@ -182,9 +182,9 @@ export default function MyAppointments() {
     }
   }
 
-  const active    = data.filter(a => a.status === "booked")
+  const active = data.filter(a => a.status === "booked")
   const cancelled = data.filter(a => a.status === "cancelled")
-  const shown     = tab === "active" ? active : cancelled
+  const shown = tab === "active" ? active : cancelled
 
   return (
     <div style={{
@@ -319,47 +319,47 @@ export default function MyAppointments() {
             >
               {tab === "active"
                 ? shown.map((a, i) => (
-                    <AppointmentRow key={a.id} appt={a} onCancel={cancel} index={i} />
-                  ))
+                  <AppointmentRow key={a.id} appt={a} onCancel={cancel} index={i} />
+                ))
                 : shown.map((a, i) => (
-                    <motion.div
-                      key={a.id}
-                      initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }}
-                      transition={{ delay: i * 0.05, ease }}
-                      style={{
-                        background: "#fafafa", border: "1px solid #f3f4f6",
-                        borderRadius: 14, padding: "16px 20px",
-                        display: "flex", alignItems: "center",
-                        justifyContent: "space-between", gap: 16,
-                        opacity: 0.7,
-                      }}
-                    >
-                      <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
-                        <div style={{
-                          width: 38, height: 38, borderRadius: 10,
-                          background: "#f3f4f6", border: "1px solid #e5e9f2",
-                          display: "flex", alignItems: "center", justifyContent: "center",
-                          color: "#9ca3af",
-                        }}>
-                          <CalIcon />
-                        </div>
-                        <div>
-                          <p style={{ fontSize: 13, fontWeight: 500, color: "#6b7280" }}>Dr. Anil Sharma</p>
-                          <p style={{ fontSize: 12, color: "#9ca3af", marginTop: 2 }}>
-                            {(() => { try { return new Date(a.date).toLocaleDateString("en-IN", { day: "numeric", month: "short", year: "numeric" }) } catch { return a.date } })()} · {a.time}
-                          </p>
-                        </div>
-                      </div>
-                      <span style={{
-                        fontSize: 11, fontWeight: 500, padding: "3px 10px",
-                        borderRadius: 100, background: "#f3f4f6",
-                        color: "#9ca3af", border: "1px solid #e5e9f2",
-                        letterSpacing: "0.04em",
+                  <motion.div
+                    key={a.id}
+                    initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: i * 0.05, ease }}
+                    style={{
+                      background: "#fafafa", border: "1px solid #f3f4f6",
+                      borderRadius: 14, padding: "16px 20px",
+                      display: "flex", alignItems: "center",
+                      justifyContent: "space-between", gap: 16,
+                      opacity: 0.7,
+                    }}
+                  >
+                    <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
+                      <div style={{
+                        width: 38, height: 38, borderRadius: 10,
+                        background: "#f3f4f6", border: "1px solid #e5e9f2",
+                        display: "flex", alignItems: "center", justifyContent: "center",
+                        color: "#9ca3af",
                       }}>
-                        CANCELLED
-                      </span>
-                    </motion.div>
-                  ))
+                        <CalIcon />
+                      </div>
+                      <div>
+                        <p style={{ fontSize: 13, fontWeight: 500, color: "#6b7280" }}>Dr. Anil Sharma</p>
+                        <p style={{ fontSize: 12, color: "#9ca3af", marginTop: 2 }}>
+                          {(() => { try { return new Date(a.date).toLocaleDateString("en-IN", { day: "numeric", month: "short", year: "numeric" }) } catch { return a.date } })()} · {a.time}
+                        </p>
+                      </div>
+                    </div>
+                    <span style={{
+                      fontSize: 11, fontWeight: 500, padding: "3px 10px",
+                      borderRadius: 100, background: "#f3f4f6",
+                      color: "#9ca3af", border: "1px solid #e5e9f2",
+                      letterSpacing: "0.04em",
+                    }}>
+                      CANCELLED
+                    </span>
+                  </motion.div>
+                ))
               }
             </motion.div>
           )}

@@ -7,8 +7,8 @@ import { motion, AnimatePresence } from "framer-motion"
 const ease = [0.16, 1, 0.3, 1]
 
 export default function Admin() {
-  const [time, setTime]   = useState("")
-  const [date, setDate]   = useState("")
+  const [time, setTime] = useState("")
+  const [date, setDate] = useState("")
   const [loading, setLoading] = useState(false)
   const [created, setCreated] = useState([])
 
@@ -69,11 +69,11 @@ export default function Admin() {
           fontSize: 13, color: "#6b7280", textDecoration: "none",
           marginBottom: 28, transition: "color 0.2s",
         }}
-        onMouseEnter={e => e.currentTarget.style.color = "#111827"}
-        onMouseLeave={e => e.currentTarget.style.color = "#6b7280"}
+          onMouseEnter={e => e.currentTarget.style.color = "#111827"}
+          onMouseLeave={e => e.currentTarget.style.color = "#6b7280"}
         >
           <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
-            <path d="M9 2L4 7l5 5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+            <path d="M9 2L4 7l5 5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
           </svg>
           Admin dashboard
         </Link>
@@ -88,10 +88,10 @@ export default function Admin() {
               boxShadow: "0 2px 8px rgba(79,70,229,0.3)",
             }}>
               <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                <rect x="1" y="3" width="14" height="11" rx="2" stroke="white" strokeWidth="1.3"/>
-                <path d="M1 7h14" stroke="white" strokeWidth="1.3"/>
-                <path d="M4.5 1v2M11.5 1v2" stroke="white" strokeWidth="1.3" strokeLinecap="round"/>
-                <path d="M8 9.5v2M7 10.5h2" stroke="white" strokeWidth="1.3" strokeLinecap="round"/>
+                <rect x="1" y="3" width="14" height="11" rx="2" stroke="white" strokeWidth="1.3" />
+                <path d="M1 7h14" stroke="white" strokeWidth="1.3" />
+                <path d="M4.5 1v2M11.5 1v2" stroke="white" strokeWidth="1.3" strokeLinecap="round" />
+                <path d="M8 9.5v2M7 10.5h2" stroke="white" strokeWidth="1.3" strokeLinecap="round" />
               </svg>
             </div>
             <h1 className="serif" style={{
@@ -152,8 +152,8 @@ export default function Admin() {
                 }}
               >
                 <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
-                  <circle cx="7" cy="7" r="6" fill="#dbeafe" stroke="#93c5fd" strokeWidth="1.2"/>
-                  <path d="M7 4v3.5l2 1" stroke="#1e40af" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round"/>
+                  <circle cx="7" cy="7" r="6" fill="#dbeafe" stroke="#93c5fd" strokeWidth="1.2" />
+                  <path d="M7 4v3.5l2 1" stroke="#1e40af" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" />
                 </svg>
                 Creating slot for{" "}
                 <strong>
@@ -187,15 +187,15 @@ export default function Admin() {
             {loading ? (
               <>
                 <svg className="spin" width="16" height="16" viewBox="0 0 16 16" fill="none">
-                  <circle cx="8" cy="8" r="6" stroke="rgba(255,255,255,0.3)" strokeWidth="2"/>
-                  <path d="M8 2a6 6 0 0 1 6 6" stroke="white" strokeWidth="2" strokeLinecap="round"/>
+                  <circle cx="8" cy="8" r="6" stroke="rgba(255,255,255,0.3)" strokeWidth="2" />
+                  <path d="M8 2a6 6 0 0 1 6 6" stroke="white" strokeWidth="2" strokeLinecap="round" />
                 </svg>
                 Creating…
               </>
             ) : (
               <>
                 <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
-                  <path d="M7 1v12M1 7h12" stroke={!isValid ? "#9ca3af" : "white"} strokeWidth="1.8" strokeLinecap="round"/>
+                  <path d="M7 1v12M1 7h12" stroke={!isValid ? "#9ca3af" : "white"} strokeWidth="1.8" strokeLinecap="round" />
                 </svg>
                 Create slot
               </>
