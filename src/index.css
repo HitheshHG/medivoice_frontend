@@ -1,0 +1,17 @@
+@import "tailwindcss";
+
+body {
+  font-family: Inter, sans-serif;
+}
+
+.dark body {
+  background-color: #0f172a;
+  color: white;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Inter, system-ui, sans-serif;
+}
